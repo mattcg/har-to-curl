@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Covert HAR (HTTP Archive) to cURL command</title>
+		<script type="application/javascript">
+			var module = {exports: {}};
+
+			window.onload = function() {
+				var $ = function(id) {
+					return document.getElementById(id);
+				};
+
+				$('hartext').onchange = function() {
+					var har, harText = $('hartext').value;
+
+					if (!harText) {
+						return;
+					}
+
+					try {
+						har = JSON.parse(harText);
+					} catch (e) {
+						alert('Error parsing HAR: ' + e.message);
+						return;
+					}
+
+					$('curltext').value = module.exports(har);
+				};
+			};
+		</script>
+		<script type="application/javascript" src="lib/har-to-curl/lib/har-to-curl.js"></script>
+		<style type="text/css">
+			body { margin: 0; font-family: Helvetica, Arial, sans-serif; }
+			form { position: absolute; width: 100%; height: 100%; padding: 2em; box-sizing: border-box; }
+			textarea { width: 40%; height: 80%; display: inline-block; border: 1px dashed black; }
+			#hartext { margin-right: 2em; }
+		</style>
+	</head>
+	<body>
+		<form>
+			<textarea id="hartext" name="har"></textarea>
+			<textarea id="curltext" name="curl"></textarea>
+			<p>HAR goes on the left and cURL comes out on the right.</p>
+			<p><a href="https://github.com/mattcg/har-to-curl">har-to-curl.js</a> is hosted on GitHub. By <a href="https://twitter.com/mcaruanagalizia">@mcaruanagalizia</a>.</p>
+		</form>
+	</body>
+</html>
