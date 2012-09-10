@@ -1,7 +1,7 @@
 /**
  * @preserve All rights reserved by the author.
  *
- * A CommonJS utility for converting a HAR (HTTP Archive) format string to a cURL command string for use on the command line.
+ * A CommonJS utility for converting a HAR (HTTP Archive) format JSON object to a cURL command string for use on the command line.
  *
  * @author Matthew Caruana Galizia <m@m.cg>
  * @license MIT License
