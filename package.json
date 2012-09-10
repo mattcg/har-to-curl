@@ -1,6 +1,6 @@
 {
 	"name": "har-to-curl",
-	"version": "1.0",
+	"version": "0.1.0",
 	"author": "Matthew Caruana Galizia <m@m.cg>",
 	"description": "A CommonJS utility for converting a HAR (HTTP Archive) format JSON object to a cURL command string for use on the command line.",
 	"main": "./lib/har-to-curl.js",
