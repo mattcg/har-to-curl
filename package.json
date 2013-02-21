@@ -1,18 +1,30 @@
 {
 	"name": "har-to-curl",
-	"version": "0.1.1",
-	"author": "Matthew Caruana Galizia <m@m.cg>",
+	"version": "0.1.2",
 	"description": "A CommonJS utility for converting a HAR (HTTP Archive) format JSON object to a cURL command string for use on the command line.",
-	"main": "./lib/har-to-curl.js",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mattcg/har-to-curl.git"
-	},
+	"main": "lib/har-to-curl.js",
+	"repositories": [
+		{
+			"type": "git",
+			"url": "git://github.com/mattcg/har-to-curl.git"
+		}
+	],
+	"contributors": [
+		{
+			"name": "Matthew Caruana Galizia",
+			"email": "m@m.cg"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/MIT"
+		}
+	],
 	"keywords": [
 		"curl",
 		"har",
 		"convert"
 	],
-	"license": "MIT",
 	"implements": ["CommonJS/Modules/1.0"]
 }
