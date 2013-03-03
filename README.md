@@ -1,4 +1,4 @@
-# HAR to curl #
+# HAR to cURL #
 
 Written in JavaScript. CommonJS format. Inspired by a [Python implementation](https://github.com/snoe/harToCurl).
 
@@ -13,4 +13,4 @@ var myCurlCommand = harToCurl(myHarObject);
 
 ## License ##
 
-MIT (see LICENSE.txt).
+Copyright © 2012 [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia), licensed under a [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/legalcode) license.
