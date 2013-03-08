@@ -7,8 +7,15 @@ Written in JavaScript. CommonJS format. Inspired by a [Python implementation](ht
 ```JavaScript
 var harToCurl = require('har-to-curl');
 
-var myHarObject = JSON.parse('{"startedDateTime": "2013-02-21T16:23:17.806Z", "time": 577, "request": { "method": "GET", "url": "http://...');
-var myCurlCommand = harToCurl(myHarObject);
+var myHarString = '{"startedDateTime": "2013-02-21T16:23:17.806Z", "time": 577, "request": { "method": "GET", "url": "http://...';
+var myCurlCommand;
+
+// Passing in an object:
+var myHarObject = JSON.parse(myHarString);
+myCurlCommand = harToCurl(myHarObject);
+
+// Passing in a string - will be JSON.parsed automatically:
+myCurlCommand = harToCurl(myHarString);
 ```
 
 ## License ##
