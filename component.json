@@ -3,5 +3,5 @@
 	"description": "Convert a HAR (HTTP Archive) object to a cURL command using JavaScript.",
 	"version": "0.2.0",
 	"main": "lib/har-to-curl.js",
-	"license": "Creative Commons Attribution 3.0 Unported (CC BY 3.0)"
+	"license": "MIT"
 }
