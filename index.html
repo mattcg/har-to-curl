@@ -3,33 +3,50 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Convert HAR (HTTP Archive) to cURL command</title>
+		<script type="application/javascript" src="lib/har-to-curl/lib/har-to-curl.js"></script>
 		<script type="application/javascript">
-			var module = {exports: {}};
-
 			window.onload = function() {
 				var $ = function(id) {
 					return document.getElementById(id);
 				};
 
 				$('hartext').onchange = function() {
-					var har, harText = $('hartext').value;
+					var out, result, harText = $('hartext').value;
 
 					if (!harText) {
 						return;
 					}
 
+					out = $('curltext');
 					try {
-						har = JSON.parse(harText);
+						result = harToCurl(harText);
 					} catch (e) {
-						alert('Error parsing HAR: ' + e.message);
+						out.value = 'Error parsing HAR: ' + e.message + '.';
+						if (e.stack) {
+							out.value += '\n\n' + e.stack;
+						}
+
 						return;
 					}
 
-					$('curltext').value = module.exports(har);
+					if (Array.isArray(result)) {
+						result.forEach(function(command, i) {
+							if (!command) {
+								command = 'Unable to parse at index ' + i + '.';
+							}
+
+							if (i > 0) {
+								out.value += '\n\n' + command;
+							} else {
+								out.value = command;
+							}
+						});
+					} else {
+						out.value = result;
+					}
 				};
 			};
 		</script>
-		<script type="application/javascript" src="lib/har-to-curl/lib/har-to-curl.js"></script>
 		<style type="text/css">
 			body { margin: 0; font-family: Helvetica, Arial, sans-serif; }
 			form { position: absolute; width: 100%; height: 100%; padding: 2em; box-sizing: border-box; }
