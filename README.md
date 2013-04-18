@@ -22,4 +22,4 @@ myCurlCommand = harToCurl(myHarString);
 
 ## License ##
 
-Copyright © 2012 [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia), licensed under the MIT license (see LICENSE).
+Copyright © 2012 [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia), licensed under an [MIT license](http://mattcg.mit-license.org/).
