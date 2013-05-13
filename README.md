@@ -2,7 +2,7 @@
 
 Written in JavaScript. CommonJS format. Inspired by a [Python implementation](https://github.com/snoe/harToCurl).
 
-:speech_balloon: Try the [web interface](http://mattcg.github.com/har-to-curl/).
+:speech_balloon: Try the [web interface](http://mattcg.github.io/har-to-curl/).
 
 ## Install ##
 
