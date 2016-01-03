@@ -15,12 +15,7 @@
 			"email": "m@m.cg"
 		}
 	],
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "http://mattcg.mit-license.org/"
-		}
-	],
+	"license": "MIT",
 	"keywords": [
 		"curl",
 		"har",
