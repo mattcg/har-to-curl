@@ -3,10 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Convert HAR (HTTP Archive) to cURL command</title>
-		<script type="application/javascript" src="lib/har-to-curl/lib/har-to-curl.js"></script>
+		<script type="application/javascript">
+			var module = {};
+		</script>
+		<script type="application/javascript" src="https://unpkg.com/har-to-curl"></script>
 		<script type="application/javascript">
 			window.onload = function() {
-				var $ = function(id) {
+				var harToCurl = module.exports, $ = function(id) {
 					return document.getElementById(id);
 				};
 
