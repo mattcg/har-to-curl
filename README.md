@@ -6,28 +6,7 @@ Written in JavaScript. CommonJS format. Inspired by a [Python implementation](ht
 
 ## Install ##
 
-You'll need [Component](https://github.com/component/component) and GNU make to build the standalone browser version. Then run:
-
-```bash
-git clone https://github.com/mattcg/har-to-curl.git
-cd har-to-curl/
-make
-ls -l build/
-```
-
-Alternatively, use Component to install to your project.
-
-```bash
-component install har-to-curl
-```
-
-You can also use Bower.
-
-```bash
-bower install har-to-curl
-```
-
-And npm.
+Use npm:
 
 ```bash
 npm install har-to-curl
