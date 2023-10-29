@@ -24,6 +24,9 @@
 	"files": [
 		"/lib"
 	],
+	"bin": {
+		"har-to-curl": "./bin/har-to-curl-cli.js"
+	  },
 	"engines": {
 		"node": ">=12"
 	},
